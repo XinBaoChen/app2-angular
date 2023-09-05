@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="title">Skin care</h1>
+    <form #form="ngForm" class="add-to-cart-form">
+      <div class="product-details">
+        <h2>Product Name: Hydro Boost</h2>
+        <img src="../../assets/images/skincare.jpg">
+        <p>Number of Items Left: {{ itemsLeft }}</p>
+        <p>Price: $19.99</p>
+      </div>
+      <div class="quantity-container">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" [(ngModel)]="quantity">
+      </div>
+      <button type="submit" class="add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+    </form>
+  </div>
